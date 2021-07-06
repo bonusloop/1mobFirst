@@ -1,21 +1,21 @@
-.header .container, .main .container {
+.header .container, .main .container, .heli .container {
     padding: 0 15px;
 }
 
 @media screen and (min-width: 576px) {
-    .header .container, .main .container {
+    .header .container, .main .container, .heli .container {
         padding: 0 35px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header .container, .main .container {
+    .header .container, .main .container, .heli .container {
         padding: 0 50px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .header .container, .main .container {
+    .header .container, .main .container, .heli .container {
         padding: 0;
         width: 1440px;
         margin: 0 auto;
@@ -33,6 +33,7 @@
 html,
 body {
     font-family: 'Montserrat', sans-serif;
+    min-width: 320px;
 }
 
 .header {
@@ -40,7 +41,7 @@ body {
     border: 1px solid;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .header {
         box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     }
@@ -56,7 +57,7 @@ body {
     height: 60px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .header__inner {
         height: 100px;
     }
@@ -73,13 +74,13 @@ body {
     margin-right: 45px;
 }
 
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
     .header__logo {
         margin-right: 36px;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .header__logo {
         height: 23px;
     }
@@ -96,7 +97,7 @@ body {
     color: #B3B3B3;
 }
 
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
     .header__phone {
         display: block;
     }
@@ -109,13 +110,13 @@ body {
     color: #37373F;
 }
 
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
     .header__phone-city {
         display: none;
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
     .header__user {
         display: none;
     }
@@ -124,9 +125,15 @@ body {
 .main {
     background-color: silver;
     color: #fff;
-    background-image: url("./../images/helimain.svg");
+    background-image: url("./../images/main.jpg");
     background-size: cover;
     background-position: 62% 0;
+}
+
+@media (min-width: 768px) {
+    .main {
+        background-position: center;
+    }
 }
 
 .main__inner {
@@ -139,6 +146,12 @@ body {
     height: 655px;
 }
 
+@media (min-width: 768px) {
+    .main__inner {
+        height: 840px;
+    }
+}
+
 .main__title {
     font-size: 32px;
     font-weight: 700;
@@ -148,7 +161,7 @@ body {
     margin-top: -6px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .main__title {
         max-width: 596px;
         font-size: 40px;
@@ -156,7 +169,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
     .main__title {
         min-width: 887px;
         width: 100%;
@@ -226,4 +239,12 @@ body {
     filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
     -webkit-transform: translateY(-6px);
     transform: translateY(-6px);
+}
+
+.heli__title {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 34px;
+    color: #37373F;
+    text-align: center;
 }
