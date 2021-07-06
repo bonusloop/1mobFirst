@@ -1,6 +1,12 @@
 .main {
     background-color: silver;
     color: $primaryColor;
+    background-image: url('./../images/main.jpg');
+    background-size: cover;
+    background-position: 62% 0;
+    @include media (sm) {
+        background-position: center;
+    }
     .container {
         @extend %container;
     }
@@ -9,18 +15,21 @@
         flex-direction: column;
         justify-content: center;
         height: 655px;
+        @include media (sm) {
+            height: 840px;
+        }
     }
     &__title{
         @include text(32px, 700, 39px, $primaryColor); 
         max-width: 247px;
         margin-top: -6px;
-        @media screen and (min-width: 768px) {
+        @include media (sm) {
             max-width: 596px;
             font-size: 40px;
             line-height: 49px;
         }
-        @media screen and (min-width: 1280px) {
-            min-width: 596px;
+        @include media (md) {
+            min-width: 887px;
             width: 100%;
         }
         span {

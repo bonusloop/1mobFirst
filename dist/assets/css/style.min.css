@@ -21,12 +21,13 @@
 
 html,
 body {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  min-width: 320px; }
 
 .header {
   background-color: #fff;
   border: 1px solid; }
-  @media screen and (min-width: 768px) {
+  @media (min-width: 768px) {
     .header {
       box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15); } }
   .header__inner {
@@ -34,7 +35,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 60px; }
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       .header__inner {
         height: 100px; } }
   .header__wrapper {
@@ -42,10 +43,10 @@ body {
     align-items: center; }
   .header__logo {
     margin-right: 45px; }
-    @media screen and (min-width: 576px) {
+    @media (min-width: 576px) {
       .header__logo {
         margin-right: 36px; } }
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       .header__logo {
         height: 23px; } }
   .header__phone {
@@ -55,7 +56,7 @@ body {
       font-weight: 400;
       line-height: 17px;
       color: #B3B3B3; }
-    @media screen and (min-width: 576px) {
+    @media (min-width: 576px) {
       .header__phone {
         display: block; } }
   .header__phone-link {
@@ -63,21 +64,30 @@ body {
     font-weight: 400;
     line-height: 17px;
     color: #37373F; }
-  @media screen and (min-width: 576px) {
+  @media (min-width: 576px) {
     .header__phone-city {
       display: none; } }
-  @media screen and (min-width: 1280px) {
+  @media (min-width: 1280px) {
     .header__user {
       display: none; } }
 
 .main {
   background-color: silver;
-  color: #fff; }
+  color: #fff;
+  background-image: url("./../images/main.jpg");
+  background-size: cover;
+  background-position: 62% 0; }
+  @media (min-width: 768px) {
+    .main {
+      background-position: center; } }
   .main__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 655px; }
+    @media (min-width: 768px) {
+      .main__inner {
+        height: 840px; } }
   .main__title {
     font-size: 32px;
     font-weight: 700;
@@ -85,14 +95,14 @@ body {
     color: #fff;
     max-width: 247px;
     margin-top: -6px; }
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       .main__title {
         max-width: 596px;
         font-size: 40px;
         line-height: 49px; } }
-    @media screen and (min-width: 1280px) {
+    @media (min-width: 1280px) {
       .main__title {
-        min-width: 596px;
+        min-width: 887px;
         width: 100%; } }
     .main__title span {
       color: #FC9B09; }
